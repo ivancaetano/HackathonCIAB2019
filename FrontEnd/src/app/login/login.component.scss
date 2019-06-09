@@ -1,0 +1,53 @@
+.login {
+  text-align: center;
+  margin-top: 30px;
+
+  .form {
+    padding: 30px 0;
+  }
+
+  .botao {
+    width: 250px;
+    background: #256299;
+    transition: background-color 0.3ms ease;
+    padding: 5px 0;
+    border-radius: 60px;
+
+    &.success {
+      background: #45CB85;
+    }
+  }
+
+  mat-form-field {
+    width: 80%;
+  }
+
+  .social {
+    border-top: 1px solid #c0bebe;
+    margin: 30px 80px;
+
+    a {
+      display: block;
+      width: 80%;
+      margin: 8px auto;
+      padding: 5px 0;
+    }
+
+    img {
+      margin: 20px;
+    }
+  }
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 12px;
+}
+
+::ng-deep .mat-form-field-infix {
+  border-top: 6px solid transparent;
+  width: 202px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 16px 0;
+}

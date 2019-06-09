@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('http://fonts.googleapis.com/css?family=Varela+Round:400%7CVarela:400');
+
+body {
+  background-color: #ebebeb;
+  background-image: radial-gradient(circle farthest-corner at 50% 50%, #ebebeb, #dfdede);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Varela Round', sans-serif;}
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

@@ -1,0 +1,13 @@
+<div class="termo">
+  <div class="div-block-3">
+    <img src="assets/info.png" width="150" height="150" alt="">
+    <div class="text-block-2">Parte 3 de 5</div>
+    <p class="paragraph">Selecione as bases</p>
+    <mat-checkbox checked="checked" *ngFor="let base of bases">{{base.noBase}}</mat-checkbox>
+    <a #btn class="botao" [class.success]="success" (click)="avancar()" mat-raised-button color="primary">
+      <span *ngIf="!loading && !success">Continuar</span>
+      <fa-icon *ngIf="loading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+      <fa-icon *ngIf="success" [icon]="['fas', 'check']"></fa-icon>
+    </a>
+  </div>
+</div>

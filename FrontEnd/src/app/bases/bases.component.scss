@@ -1,0 +1,18 @@
+.termo {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 40px;
+
+  .botao {
+    width: 250px;
+    background: #256299;
+    transition: background-color 0.3ms ease;
+    margin-top: 40px;
+    padding: 5px 0;
+    border-radius: 60px;
+
+    &.success {
+      background: #45CB85;
+    }
+  }
+}

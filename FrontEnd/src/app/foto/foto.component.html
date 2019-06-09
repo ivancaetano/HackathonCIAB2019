@@ -1,0 +1,14 @@
+<div class="sms">
+  <div class="div-block-3">
+    <img src="assets/foto.png" width="150" height="150" alt="">
+    <p style="margin: 40px 0; color: #7c7979;">Vamos tirar uma foto sua, ok?</p>
+
+    <webcam [trigger]="triggerObservable"  (imageCapture)="handleImage($event)" [width]="250" allowCameraSwitch="true"></webcam>
+
+    <a #btn class="botao" [class.success]="success" (click)="triggerSnapshot();" mat-raised-button color="primary">
+      <span *ngIf="!loading && !success">Continuar</span>
+      <fa-icon *ngIf="loading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+      <fa-icon *ngIf="success" [icon]="['fas', 'check']"></fa-icon>
+    </a>
+  </div>
+</div>

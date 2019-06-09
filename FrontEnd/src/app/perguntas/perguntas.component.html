@@ -1,0 +1,34 @@
+<div class="perguntas">
+  <div class="div-block-3">
+    <img src="assets/info.png" width="150" height="150" alt="">
+    <p style="margin: 40px 0; color: #7c7979; ">Agora, precisamos saber um pouco mais sobre você.</p>
+
+    <ng-container *ngFor="let pergunta of perguntas.lsPerguntas">
+      <div *ngIf="pergunta.noTipo == 'DROP'">
+        <h4>{{pergunta.deEnunciado}}</h4>
+        <mat-form-field appearance="outline">
+          <mat-label>{{pergunta.deEnunciado}}</mat-label>
+          <mat-select [(ngModel)]="pergunta.deResposta" >
+            <mat-option *ngFor="let o of pergunta.lsOpcoes" [value]="o.coOpcao">
+              {{o.noOpcao}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div *ngIf="pergunta.noTipo == 'DATA'">
+        <h4>{{pergunta.deEnunciado}}</h4>
+        <mat-form-field appearance="outline">
+          <input [(ngModel)]="pergunta.deResposta" matInput [matDatepicker]="picker" placeholder="Escolha uma data">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </ng-container>
+    <a #btn class="botao" [class.success]="success" (click)="avancar()" mat-raised-button color="primary">
+      <span *ngIf="!loading && !success">Continuar</span>
+      <fa-icon *ngIf="loading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+      <fa-icon *ngIf="success" [icon]="['fas', 'check']"></fa-icon>
+    </a>
+  </div>
+</div>

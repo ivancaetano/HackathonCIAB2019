@@ -1,0 +1,16 @@
+<div class="termo">
+  <div class="div-block-3">
+    <img src="assets/prot.dados.png" width="150" height="150" alt="">
+    <p style="margin: 40px 0; color: #7c7979; font-size: 14px;line-height: 1.4em;">Conforme Lei Geral de Proteção de
+      Dados (Lei 13.709) sancionada em 14 de agosto de 2018, este aplicativo faz a análise e conformidade de dados
+      utilizando de informações de bases públicas e de instituições do sistema financeiro nacional.
+      Aceitando estes termos, você concorda em fornecer todo acesso necessário e irrestrito a esses dados.
+      A qualquer momento estas informações podem ser alteradas em seu cadastro.</p>
+    <mat-checkbox style="color: #7c7979;">Li e concordo com as informações.</mat-checkbox>
+    <a #btn class="botao" [class.success]="success" (click)="avancar()" mat-raised-button color="primary">
+      <span *ngIf="!loading && !success">Continuar</span>
+      <fa-icon *ngIf="loading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+      <fa-icon *ngIf="success" [icon]="['fas', 'check']"></fa-icon>
+    </a>
+  </div>
+</div>

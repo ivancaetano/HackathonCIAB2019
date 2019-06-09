@@ -1,0 +1,22 @@
+.sms {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 40px;
+
+  input {
+    font-size: 30px;
+  }
+
+  .botao {
+    width: 250px;
+    background: #256299;
+    transition: background-color 0.3ms ease;
+    margin-top: 40px;
+    border-radius: 60px;
+    padding: 5px 0;
+
+    &.success {
+      background: #45CB85;
+    }
+  }
+}
