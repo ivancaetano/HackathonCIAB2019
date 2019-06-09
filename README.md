@@ -8,6 +8,8 @@ Banco de dados MSSQL Server
 
 API de reconhecimento facial: Azure Face
 
+Integração com SMS e WhatsApp para autenticação de 2 fatores: Twilio
+
 Link do protótipo: https://ciab.ai8.com.br/
 
 Usuário: ivancaetano@gmail.com
